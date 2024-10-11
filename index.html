@@ -8,9 +8,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --text-color: #141414;
+            --background-color: #FEFEFE;
+            --link-hover-color: #0000FF;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-color: #FEFEFE;
+                --background-color: #141414;
+                --link-hover-color: #6666FF;
+            }
+        }
         body {
             overflow: hidden;
             padding: 2.5rem;
+            color: var(--text-color);
+            background-color: var(--background-color);
             font-size: 16px; /* Base font size */
         }
         .jetbrains-mono-fabio {
@@ -20,10 +34,10 @@
             font-style: normal;
         }
         a {
-            color: #141414;
+            color: var(--text-color);
         }
         a:hover {
-            color: #0000FF;
+            color: var(--link-hover-color);
         }
         p {
             font-size: 1em; /* 1em = 16px on desktop */
